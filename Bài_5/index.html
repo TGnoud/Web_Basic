@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rổ Phim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Phần Header của trang -->
+    <header>
+        <div class="container">
+            <h1><a href="#">Rổ Phim</a></h1>
+            
+            <!-- Thanh điều hướng chính -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Phần nội dung chính của trang -->
+    <main>
+        <div class="container">
+            
+            <!-- Phần giới thiệu chung về cửa hàng -->
+            <section class="intro">
+                <h2>Chào mừng đến với Rổ Phim!</h2>
+                <p>Nơi sưu tầm những bộ phim kinh điển và bom tấn mới nhất. Khám phá bộ sưu tập đĩa phim Blu-ray và DVD của chúng tôi.</p>
+            </section>
+
+            <!-- Phần danh sách sản phẩm -->
+            <section id="product-list-section">
+                
+                <!-- Thêm các nút điều khiển: Thêm sản phẩm và Tìm kiếm -->
+                <div id="controls">
+                    <button id="toggle-form-btn">Thêm sản phẩm</button>
+                    <div id="search-container">
+                        <input type="text" id="search-input" placeholder="Tìm theo tên phim...">
+                        <button id="search-btn">Tìm</button>
+                    </div>
+                </div>
+                
+                <h2>Sản Phẩm Nổi Bật</h2>
+                
+                <!-- Container cho danh sách sản phẩm  -->
+                <div id="product-list">
+                    
+                </div>
+            </section>
+
+            <!-- Phần Form Thêm Sản Phẩm (trước đây là form liên hệ) -->
+            <!-- Thêm class "hidden" để ẩn mặc định -->
+            <section id="add-product-form-section" class="hidden">
+                <h2>Thêm Sản Phẩm Mới</h2>
+                <p>Nhập thông tin chi tiết cho sản phẩm mới.</p>
+                
+                <!-- Form đã được cập nhật với các trường cho sản phẩm mới -->
+                <form id="add-product-form" action="#" method="get">
+                    <div class="form-group">
+                        <label for="product-name">Tên sản phẩm:</label>
+                        <input type="text" id="product-name" name="product_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-desc">Mô tả:</label>
+                        <textarea id="product-desc" name="product_desc" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-price">Giá (VNĐ):</label>
+                        <!-- Đổi type="text" thành type="number" để validate số dễ hơn -->
+                        <input type="number" id="product-price" name="product_price" placeholder="Ví dụ: 250000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-image">Link hình ảnh (URL):</label>
+                        <input type="text" id="product-image" name="product_image" placeholder="Ví dụ: https://example.com/image.jpg">
+                    </div>
+
+                    <!-- Vùng hiển thị thông báo lỗi -->
+                    <div id="form-error-msg" class="error-message"></div>
+                    
+                    <!-- Cập nhật nhóm nút: Thêm nút Hủy -->
+                    <div class="form-group button-group">
+                        <button type="submit">Lưu Sản Phẩm</button>
+                        <button type="button" id="cancel-add-btn" class="btn-cancel">Hủy</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Phần Footer của trang -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rổ Phim. Mọi quyền được bảo lưu.</p>
+            <p>Địa chỉ: Số 1, Đại Cồ Việt, Hà Nội</p>
+        </div>
+    </footer>
+
+    <!-- Nhúng file JavaScript  -->
+    <script src="script.js"></script>
+</body>
+</html>
+
