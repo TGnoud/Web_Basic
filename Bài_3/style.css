@@ -1,0 +1,327 @@
+/* --- Cài đặt chung --- */
+:root {
+    --primary-color: #0d6efd; /* Màu xanh dương chủ đạo */
+    --dark-color: #212529;   /* Màu tối cho header/footer */
+    --light-color: #f8f9fa;  /* Màu nền sáng */
+    --text-color: #333;
+    --border-color: #dee2e6;
+}
+
+/* Thiết lập box-sizing và font chữ cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: var(--text-color);
+}
+
+/* Lớp container để căn giữa nội dung */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.75rem;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 1rem 0;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Menu ngang */
+nav ul.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+nav ul.nav-links li {
+    margin-left: 20px;
+}
+
+nav ul.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Main Content --- */
+main {
+    padding: 2rem 0;
+}
+
+main section {
+    margin-bottom: 2.5rem;
+}
+
+/* --- Các nút điều khiển (Thêm SP, Tìm kiếm) --- */
+#controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+#toggle-form-btn {
+    background-color: #198754; /* Màu xanh lá */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-form-btn:hover {
+    background-color: #157347;
+}
+
+#search-container {
+    display: flex;
+    gap: 5px;
+}
+
+#search-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+#search-container button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+#search-container button:hover {
+    background-color: #0b5ed7;
+}
+
+
+/* --- Danh sách sản phẩm --- */
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+    justify-content: center;
+}
+
+.product-item {
+    flex: 1 1 30%; 
+    max-width: 350px; /* Giới hạn độ rộng tối đa */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--light-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Đảm bảo ảnh bo tròn theo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-item h3 {
+    font-size: 1.25rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+}
+
+.product-item p {
+    margin: 0 1rem 0.5rem 1rem;
+    color: #555;
+}
+
+.product-item .price {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0 1rem 1rem 1rem;
+}
+
+/* --- Form liên hệ --- */
+#contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 2rem;
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+/* Sửa lại selector cho form mới */
+#add-product-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 2rem;
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical; /* Cho phép thay đổi chiều cao */
+}
+
+.form-group button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #0848a8ff; /* Màu xanh đậm hơn khi hover */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--dark-color);
+    color: #aaa;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+/* --- Tiện ích --- */
+.hidden {
+    display: none;
+}
+
+/* --- Thiết kế Responsive --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        margin-bottom: 1rem;
+    }
+
+    nav ul.nav-links {
+        padding-top: 0;
+    }
+}
+
+/* Sử dụng 600px như trong hướng dẫn cho mobile */
+@media (max-width: 600px) {
+    /* Menu chuyển sang dọc */
+    nav ul.nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul.nav-links li {
+        margin: 5px 0;
+    }
+
+    /* Sản phẩm hiển thị 1 cột */
+    #product-list {
+        flex-direction: column;
+    }
+
+    .product-item {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    /* Cập nhật responsive cho #controls */
+    #controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #search-container {
+        flex-direction: column;
+    }
+
+    #search-container input[type="text"],
+    #search-container button {
+        width: 100%;
+    }
+
+    #add-product-form {
+        padding: 1.5rem;
+    }
+}
+

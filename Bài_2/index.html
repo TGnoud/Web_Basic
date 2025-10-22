@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <!-- Thẻ meta viewport để hỗ trợ thiết kế responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rổ Phim</title>
+    <!-- Liên kết đến file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Phần Header của trang -->
+    <header>
+        <div class="container">
+            <h1><a href="#">Rổ Phim</a></h1>
+            
+            <!-- Thanh điều hướng chính -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Phần nội dung chính của trang -->
+    <main>
+        <div class="container">
+            
+            <!-- Phần giới thiệu chung về cửa hàng -->
+            <section class="intro">
+                <h2>Chào mừng đến với Rổ Phim!</h2>
+                <p>Nơi sưu tầm những bộ phim kinh điển và bom tấn mới nhất. Khám phá bộ sưu tập đĩa phim Blu-ray và DVD của chúng tôi.</p>
+            </section>
+
+            <!-- Phần danh sách sản phẩm -->
+            <section id="product-list-section">
+                <h2>Sản Phẩm Nổi Bật</h2>
+                
+                <!-- Container cho danh sách sản phẩm (để dùng Flexbox/Grid) -->
+                <div id="product-list">
+                    
+                    <!-- Sản phẩm mẫu 1 -->
+                    <article class="product-item">
+                        <!-- Ảnh placeholder thay thế cho ảnh cục bộ -->
+                        <img src="../img/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg" alt="Bìa phim Inception">
+                        <h3>Inception (2010)</h3>
+                        <p>Một tên trộm chuyên nghiệp đánh cắp thông tin bằng cách xâm nhập vào tiềm thức của mục tiêu.</p>
+                        <p class="price">Giá: 270.000 VNĐ</p>
+                    </article>
+                    
+                    <!-- Sản phẩm mẫu 2 -->
+                    <article class="product-item">
+                        <img src="../img/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Bìa phim Interstellar">
+                        <h3>Interstellar (2014)</h3>
+                        <p>Hố đen tử thần là một bộ phim khoa học viễn tưởng năm 2014 của đạo diễn Christopher Nolan. Với dàn diễn viên gồm Matthew McConaughey, Timothee Chalamet, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn và Michael Caine, bộ phim kể về một nhóm nhà du hành vũ trụ đi xuyên qua hố đen.</p>
+                        <p class="price">Giá: 300.000 VNĐ</p>
+                    </article>
+                    
+                    <!-- Sản phẩm mẫu 3 -->
+                    <article class="product-item">
+                        <img src="../img/Oppenheimer-PosterSpy-4.jpg" alt="Bìa phim Oppenheimer">
+                        <h3>Oppenheimer (2023)</h3>
+                        <p>Tác phẩm xoay quanh Robert Oppenheimer, một nhà vật lý lý thuyết người Mỹ gốc Do Thái, người đã hợp tác phát triển ra bom nguyên tử trong dự án Manhattan.</p>
+                        <p class="price">Giá: 250.000 VNĐ</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Phần Form liên hệ -->
+            <section id="contact-form-section">
+                <h2>Liên Hệ Với Chúng Tôi</h2>
+                <p>Đăng ký nhận tin hoặc gửi thắc mắc cho chúng tôi!</p>
+                
+                <!-- Form đã được cập nhật với các lớp CSS -->
+                <form id="contact-form" action="#" method="get">
+                    <div class="form-group">
+                        <label for="name">Họ và tên:</label>
+                        <input type="text" id="name" name="customer_name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="customer_email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Lời nhắn:</label>
+                        <textarea id="message" name="customer_message" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit">Gửi</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Phần Footer của trang -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rổ Phim. Mọi quyền được bảo lưu.</p>
+            <p>Địa chỉ: Số 1, Đại Cồ Việt, Hà Nội</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
